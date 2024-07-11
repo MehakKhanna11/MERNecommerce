@@ -7,6 +7,7 @@ import { useLoginMutation } from "../redux/api/userApi";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 import { MessageResponse } from "../types/api-types";
 
+
 const Login = () => {
   const [gender, setGender] = useState("");
   const [date, setDate] = useState("");
@@ -29,7 +30,7 @@ const Login = () => {
       });
 
       if(res.data){
-        toast.success(res.data.message)
+        toast.success(res.data.message);
       }
       else{
         const error=res.error as FetchBaseQueryError;
